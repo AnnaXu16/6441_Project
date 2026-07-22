@@ -4,9 +4,10 @@ import Home from './pages/Home'
 import ClipPage from './pages/ClipPage'
 import Quiz from './pages/Quiz'
 import ConceptMatch from './pages/ConceptMatch'
+import Glossary from './pages/Glossary'
 import NotFound from './pages/NotFound'
 
-// The site has a simple home, quiz, and one reusable page for all clips.
+// Main routes stay together so new learning pages are easy to find and update.
 export default function App() {
   return (
     <Routes>
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="clips/:clipId" element={<ClipPage />} />
         <Route path="quiz" element={<Quiz />} />
         <Route path="concept-match" element={<ConceptMatch />} />
+        <Route path="glossary" element={<Glossary />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

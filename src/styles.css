@@ -549,6 +549,169 @@ main {
   padding-block: 70px 110px;
 }
 
+.glossary-page {
+  min-height: 760px;
+  padding-block: 70px 110px;
+}
+
+.glossary-title {
+  margin-bottom: 48px;
+}
+
+.glossary-title h1 {
+  margin: 14px 0 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(32px, 7vw, 76px);
+  font-weight: 400;
+  letter-spacing: -.05em;
+  white-space: nowrap;
+}
+
+.glossary-tools {
+  padding: 18px 20px;
+  display: grid;
+  grid-template-columns: auto minmax(180px, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  border: 1px solid var(--line);
+  border-radius: 6px 6px 0 0;
+  background: var(--card);
+}
+
+.glossary-tools label,
+.glossary-tools > span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.glossary-tools input {
+  width: 100%;
+  min-height: 46px;
+  padding-inline: 15px;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+  font: inherit;
+}
+
+.glossary-tools input::placeholder {
+  color: #8794aa;
+}
+
+.glossary-tools input:focus {
+  border-color: var(--accent);
+}
+
+.glossary-list {
+  border: 1px solid var(--line);
+  border-top: 0;
+  border-radius: 0 0 6px 6px;
+  background: var(--card);
+  box-shadow: 0 18px 44px rgba(16, 35, 66, .08);
+  overflow: hidden;
+}
+
+.glossary-item + .glossary-item {
+  border-top: 1px solid var(--line);
+}
+
+.glossary-item summary {
+  min-height: 82px;
+  padding: 18px 24px;
+  display: grid;
+  grid-template-columns: 48px 1fr 32px;
+  align-items: center;
+  gap: 18px;
+  list-style: none;
+  cursor: pointer;
+  transition: background .18s ease;
+}
+
+.glossary-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.glossary-item summary:hover {
+  background: var(--surface);
+}
+
+.glossary-item summary > span {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.glossary-item summary > strong {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(21px, 3vw, 27px);
+  font-weight: 400;
+}
+
+.glossary-item summary > b {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 400;
+  transition: transform .18s ease, color .18s ease, background .18s ease;
+}
+
+.glossary-item[open] summary {
+  color: var(--white);
+  background: var(--accent);
+}
+
+.glossary-item[open] summary > span,
+.glossary-item[open] summary > b {
+  color: var(--white);
+}
+
+.glossary-item[open] summary > b {
+  border-color: rgba(255, 255, 255, .55);
+  transform: rotate(45deg);
+}
+
+.glossary-definition {
+  padding: 28px 74px 32px 90px;
+  border-top: 1px solid var(--line);
+  background: #f9fbff;
+}
+
+.glossary-definition p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.glossary-empty {
+  padding: 54px 24px;
+  text-align: center;
+}
+
+.glossary-empty strong {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.glossary-empty p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.glossary-empty p {
+  margin: 6px 0 0;
+}
+
 .match-title {
   margin-bottom: 46px;
   display: grid;
@@ -1157,6 +1320,7 @@ main {
 
   .header-inner {
     min-height: 68px;
+    gap: 12px;
   }
 
   .wordmark > span:last-child {
@@ -1164,7 +1328,7 @@ main {
   }
 
   .site-header nav {
-    gap: 14px;
+    gap: 10px;
   }
 
   .site-header nav a {
@@ -1286,6 +1450,33 @@ main {
 
   .match-page {
     padding-block: 48px 78px;
+  }
+
+  .glossary-page {
+    padding-block: 48px 78px;
+  }
+
+  .glossary-title {
+    margin-bottom: 34px;
+  }
+
+  .glossary-tools {
+    grid-template-columns: 1fr auto;
+  }
+
+  .glossary-tools label {
+    grid-column: 1 / -1;
+  }
+
+  .glossary-item summary {
+    min-height: 74px;
+    padding: 16px;
+    grid-template-columns: 34px 1fr 32px;
+    gap: 10px;
+  }
+
+  .glossary-definition {
+    padding: 24px 20px 28px 60px;
   }
 
   .match-title h1 {

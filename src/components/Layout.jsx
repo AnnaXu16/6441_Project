@@ -11,6 +11,7 @@ export default function Layout() {
           </Link>
           <nav aria-label="Main navigation">
             <NavLink to="/" end>Home</NavLink>
+            <NavLink to="/glossary">Glossary</NavLink>
             <NavLink to="/quiz">Quiz</NavLink>
             <NavLink to="/concept-match">Concept Match</NavLink>
           </nav>
