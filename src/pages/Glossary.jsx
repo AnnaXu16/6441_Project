@@ -1,15 +1,12 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import securityConcepts from '../data/securityConcepts'
-
-// Start with a short selection; the full glossary can be populated later.
-const starterTerms = securityConcepts.slice(0, 6)
+import glossaryTerms from '../data/glossaryTerms'
 
 export default function Glossary() {
   const [search, setSearch] = useState('')
   const query = search.trim().toLowerCase()
-  const visibleTerms = starterTerms.filter(item =>
-    item.term.toLowerCase().includes(query)
+  const visibleTerms = glossaryTerms.filter(item =>
+    item.term.toLowerCase().includes(query) || item.definition.toLowerCase().includes(query)
   )
 
   return (
@@ -28,7 +25,7 @@ export default function Glossary() {
           type="search"
           value={search}
           onChange={event => setSearch(event.target.value)}
-          placeholder="Search the starter glossary"
+          placeholder="Search terms or definitions"
         />
         <span>{visibleTerms.length} terms</span>
       </div>
@@ -49,8 +46,8 @@ export default function Glossary() {
 
         {visibleTerms.length === 0 && (
           <div className="glossary-empty" role="status">
-            <strong>No matching term yet.</strong>
-            <p>Try another search, or check again when more terms are added.</p>
+            <strong>No matching term.</strong>
+            <p>Try a different word or phrase.</p>
           </div>
         )}
       </div>
