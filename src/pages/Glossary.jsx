@@ -1,13 +1,25 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import glossaryTerms from '../data/glossaryTerms'
 
 export default function Glossary() {
   const [search, setSearch] = useState('')
+  const { hash } = useLocation()
   const query = search.trim().toLowerCase()
   const visibleTerms = glossaryTerms.filter(item =>
     item.term.toLowerCase().includes(query) || item.definition.toLowerCase().includes(query)
   )
+
+  // Links from an analysis open and centre the matching glossary definition.
+  useEffect(() => {
+    if (!hash) return
+
+    const target = document.getElementById(hash.slice(1))
+    if (!target) return
+
+    target.open = true
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }, [hash])
 
   return (
     <section className="glossary-page page-width">
@@ -32,7 +44,7 @@ export default function Glossary() {
 
       <div className="glossary-list">
         {visibleTerms.map((item, index) => (
-          <details className="glossary-item" key={item.id}>
+          <details className="glossary-item" id={item.id} key={item.id}>
             <summary>
               <span>{String(index + 1).padStart(2, '0')}</span>
               <strong>{item.term}</strong>

@@ -4,15 +4,30 @@ import clips from '../data/clips'
 import ClipQuiz from '../components/ClipQuiz'
 import NotFound from './NotFound'
 
-const analysisSections = [
-  'What happens in the scene?',
-  'What security weakness is exploited?',
-  'Why does the attack work?',
-  'Attack breakdown',
-  'Real-world cybersecurity connection',
-  'How to defend against it',
-  'Key takeaway',
+const defaultAnalysisSections = [
+  { title: 'What happens in the scene?' },
+  { title: 'What security weakness is exploited?' },
+  { title: 'Why does the attack work?' },
+  { title: 'Attack breakdown' },
+  { title: 'Real-world cybersecurity connection' },
+  { title: 'How to defend against it' },
+  { title: 'Key takeaway' },
 ]
+
+// Analysis data can link technical terms directly to their glossary definitions.
+function formatAnalysisText(text) {
+  return text.split(/(\[\[.+?\|.+?\]\])/g).map((part, index) => {
+    const match = part.match(/^\[\[(.+?)\|(.+?)\]\]$/)
+    if (!match) return part
+
+    const [, label, glossaryId] = match
+    return (
+      <Link className="glossary-term-link" to={`/glossary#${glossaryId}`} key={`${glossaryId}-${index}`}>
+        {label}
+      </Link>
+    )
+  })
+}
 
 export default function ClipPage() {
   const { clipId } = useParams()
@@ -20,6 +35,7 @@ export default function ClipPage() {
   const clip = clips[currentIndex]
   const previousClip = clips[currentIndex - 1]
   const nextClip = clips[currentIndex + 1]
+  const sections = clip?.analysisSections || defaultAnalysisSections
 
   // Moving between clips uses the same page component, so reset its scroll position.
   useEffect(() => {
@@ -68,10 +84,20 @@ export default function ClipPage() {
         </div>
 
         <div className="analysis-grid">
-          {analysisSections.map((heading, index) => (
-            <article className="analysis-card" key={heading}>
+          {sections.map((section, index) => (
+            <article
+              className={`analysis-card ${section.paragraphs?.length ? 'has-content' : ''}`}
+              key={section.title}
+            >
               <span>{String(index + 1).padStart(2, '0')}</span>
-              <h3>{heading}</h3>
+              <h3>{section.title}</h3>
+              {section.paragraphs?.length > 0 && (
+                <div className="analysis-copy">
+                  {section.paragraphs.map(paragraph => (
+                    <p key={paragraph}>{formatAnalysisText(paragraph)}</p>
+                  ))}
+                </div>
+              )}
             </article>
           ))}
         </div>
