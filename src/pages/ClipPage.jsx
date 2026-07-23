@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import clips from '../data/clips'
 import ClipQuiz from '../components/ClipQuiz'
@@ -15,7 +16,15 @@ const analysisSections = [
 
 export default function ClipPage() {
   const { clipId } = useParams()
-  const clip = clips.find(item => item.id === clipId)
+  const currentIndex = clips.findIndex(item => item.id === clipId)
+  const clip = clips[currentIndex]
+  const previousClip = clips[currentIndex - 1]
+  const nextClip = clips[currentIndex + 1]
+
+  // Moving between clips uses the same page component, so reset its scroll position.
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [clipId])
 
   if (!clip) return <NotFound />
 
@@ -69,6 +78,46 @@ export default function ClipPage() {
       </section>
 
       <ClipQuiz key={clip.id} clipTitle={clip.title} />
+
+      <nav className="clip-navigation" aria-label="Previous and next clips">
+        <div className="clip-navigation-heading">
+          <div>
+            <p className="eyebrow">CONTINUE EXPLORING</p>
+            <h2>More scenes</h2>
+          </div>
+          <span>Scene {currentIndex + 1} of {clips.length}</span>
+        </div>
+
+        <div className="clip-navigation-grid">
+          {previousClip ? (
+            <Link className="clip-nav-card previous" to={`/clips/${previousClip.id}`}>
+              <span>← Previous scene</span>
+              <strong>{previousClip.title}</strong>
+              <small>{previousClip.film}</small>
+            </Link>
+          ) : (
+            <div className="clip-nav-card is-disabled">
+              <span>Previous scene</span>
+              <strong>Start of collection</strong>
+              <small>You are viewing the first scene</small>
+            </div>
+          )}
+
+          {nextClip ? (
+            <Link className="clip-nav-card next" to={`/clips/${nextClip.id}`}>
+              <span>Next scene →</span>
+              <strong>{nextClip.title}</strong>
+              <small>{nextClip.film}</small>
+            </Link>
+          ) : (
+            <div className="clip-nav-card next is-disabled">
+              <span>Next scene</span>
+              <strong>End of collection</strong>
+              <small>You have reached the final scene</small>
+            </div>
+          )}
+        </div>
+      </nav>
     </section>
   )
 }
