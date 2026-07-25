@@ -65,8 +65,7 @@ main {
 }
 
 .page-width,
-.header-inner,
-.footer-inner {
+.header-inner {
   width: min(1120px, calc(100% - 48px));
   margin-inline: auto;
 }
@@ -189,26 +188,6 @@ main {
   color: #c7d9ff;
 }
 
-.hero-introduction {
-  padding-bottom: 14px;
-  border-top: 1px solid rgba(255, 255, 255, .7);
-}
-
-.hero-introduction > p {
-  margin: 25px 0 34px;
-  color: #edf3ff;
-  font-size: 17px;
-  text-shadow: 0 2px 16px rgba(6, 14, 18, .72);
-}
-
-.home-hero .text-link {
-  color: var(--white);
-}
-
-.home-hero .text-link span {
-  color: #c7d9ff;
-}
-
 .image-credit {
   position: absolute;
   right: 16px;
@@ -220,19 +199,6 @@ main {
 
 .image-credit:hover {
   color: var(--ink);
-}
-
-.text-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 22px;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.text-link span {
-  color: var(--accent);
-  font-size: 18px;
 }
 
 .clips-section {
@@ -790,101 +756,6 @@ main {
 
 .clip-quiz-secondary:hover {
   color: var(--accent);
-}
-
-.clip-navigation {
-  padding-top: 76px;
-  border-top: 1px solid var(--line);
-}
-
-.clip-navigation-heading {
-  margin-bottom: 30px;
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.clip-navigation-heading h2 {
-  margin: 10px 0 0;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(36px, 5vw, 52px);
-  font-weight: 400;
-  letter-spacing: -.035em;
-}
-
-.clip-navigation-heading > span {
-  margin-bottom: 6px;
-  color: var(--muted);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .09em;
-  text-transform: uppercase;
-}
-
-.clip-navigation-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.clip-nav-card {
-  min-height: 210px;
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--card);
-  box-shadow: 0 12px 30px rgba(16, 35, 66, .05);
-  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
-}
-
-a.clip-nav-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--accent);
-  box-shadow: 0 18px 40px rgba(13, 79, 194, .12);
-}
-
-.clip-nav-card > span {
-  color: var(--accent);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .09em;
-  text-transform: uppercase;
-}
-
-.clip-nav-card > strong {
-  max-width: 450px;
-  margin: auto 0 12px;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(23px, 3vw, 30px);
-  font-weight: 400;
-  line-height: 1.15;
-}
-
-.clip-nav-card > small {
-  color: var(--muted);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .09em;
-  text-transform: uppercase;
-}
-
-.clip-nav-card.next {
-  align-items: flex-end;
-  text-align: right;
-}
-
-.clip-nav-card.is-disabled {
-  background: rgba(247, 249, 255, .65);
-  box-shadow: none;
-  opacity: .58;
-}
-
-.clip-nav-card.is-disabled > span {
-  color: var(--muted);
 }
 
 .quiz-callout {
@@ -1742,28 +1613,6 @@ a.clip-nav-card:hover {
   background: var(--accent-dark);
 }
 
-.site-footer {
-  border-top: 1px solid var(--line);
-}
-
-.footer-inner {
-  min-height: 110px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.footer-inner > span {
-  font-weight: 700;
-}
-
-.footer-inner p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 12px;
-}
-
 @media (max-width: 900px) {
   .home-hero {
     min-height: auto;
@@ -1771,10 +1620,6 @@ a.clip-nav-card:hover {
     grid-template-columns: 1fr;
     align-items: start;
     gap: 55px;
-  }
-
-  .hero-introduction {
-    max-width: 620px;
   }
 
   .clip-card {
@@ -1809,8 +1654,7 @@ a.clip-nav-card:hover {
 
 @media (max-width: 640px) {
   .page-width,
-  .header-inner,
-  .footer-inner {
+  .header-inner {
     width: min(100% - 32px, 1120px);
   }
 
@@ -1839,10 +1683,6 @@ a.clip-nav-card:hover {
 
   .home-hero h1 {
     font-size: clamp(58px, 18vw, 78px);
-  }
-
-  .hero-introduction > p {
-    font-size: 16px;
   }
 
   .clips-section {
@@ -1939,29 +1779,6 @@ a.clip-nav-card:hover {
 
   .clip-quiz-actions .quiz-button {
     width: 100%;
-  }
-
-  .clip-navigation {
-    padding-top: 54px;
-  }
-
-  .clip-navigation-heading {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .clip-navigation-heading > span {
-    margin-bottom: 0;
-  }
-
-  .clip-navigation-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .clip-nav-card {
-    min-height: 180px;
-    padding: 24px;
   }
 
   .quiz-callout {
@@ -2108,13 +1925,6 @@ a.clip-nav-card:hover {
     grid-column: 1 / -1;
   }
 
-  .footer-inner {
-    min-height: auto;
-    padding-block: 28px;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 6px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -19,13 +19,6 @@ export default function Layout() {
       </header>
 
       <main><Outlet /></main>
-
-      <footer className="site-footer">
-        <div className="footer-inner">
-          <span>Security in Cinema</span>
-          <p>A university cybersecurity learning project.</p>
-        </div>
-      </footer>
     </div>
   )
 }

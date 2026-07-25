@@ -9,10 +9,6 @@ export default function Home() {
           <p className="eyebrow">CYBERSECURITY THROUGH SCREEN STORIES</p>
           <h1>Security<br />in Cinema</h1>
         </div>
-        <div className="hero-introduction">
-          <p>Explore how familiar scenes from film and television can reveal real security risks involving trust, identity, privacy, attention, and decision-making.</p>
-          <a className="text-link" href="#clips">Browse the clips <span aria-hidden="true">↓</span></a>
-        </div>
         <a className="image-credit" href="https://teachprivacy.com/" target="_blank" rel="noreferrer">Image: TeachPrivacy</a>
       </section>
 

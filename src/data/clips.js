@@ -82,7 +82,18 @@ const clips = [
           'The main security weakness shown in this scene is that people relies too much on appearance and professional status instead of proper verification. Instead of checking if Frank is actually employed by Pan Am, they rely on visual signals like his uniform and professional behaviour. These signals can support an identity claim, but they should not be treated as proof.',
           'This connects to [[authority bias|authority-bias]]. People are often more likely to trust someone who appears important, powerful or professional. Since pilots are normally seen as responsible and reputable, people assume that someone looked like pilot is also honest. This allows Frank to receive higher level of trust from the bank than an ordinary customer would receive.',
           'The attack also takes advantage of the [[halo effect|halo-effect]]. This happens when one positive characteristic influences how someone judges the rest of a person. In Franks case, his professional image causes people to make other assumptions, such as believing that he is financially reliable and that his check is genuine. However, being a pilot would not actually prove that a check is valid.',
+          'Another security weakness is that Frank was able to distract the bank employee during the transaction. He acts friendly and asks her on a date, which moves her attention away from carefully checking his identity and the check. This is [[attention manipulation|attention-manipulation]] because Frank changed what the employee focuses on during the transaction. When her attention is divided, she is likely to miss warning signs and not verify Frank properly',
           'Therefore in the scene, the system failed because the verification process depends too much on human judgement. What the bank should do is to independently verify Frank’s identity and the validity of the check. When the bank allow professional appearance to influence security decisions, attacker can bypass controls without needing to break into any technical system',
+        ],
+      },
+      {
+        title: 'Defence and Risk Reduction',
+        paragraphs: [
+          'The most important defence against this kind of attack is to perform independent identity verification. The bank shouldn’t just accept Frank’s identity because he wears a pilot uniform or claims to work for Pan Am. Instead the staff should request official identification and verify them. The verification process should be the same for every customer, no matter their professions and how they appear.',
+          'The bank should also verify the check. Even if Frank’s identity is genuine, this doesn’t prove that the check is valid. Staff should confirm if the check is actually genuine, check the account detail, signature and available funds before giving him any money.',
+          'Staff training is also important as Frank target young female bank employees and uses personal attention to influence them. For example, in the scene by asking employee on a date, it distract her from checking the transaction carefully. Therefore bank employees should also be trained to recognise when friendliness is used to influence a security decision. They should continue following the normal verification process even if the customer appears charming. Staff should also feel comfortable to ask manager for support when a customer appears to try to move the conversation away from the transaction.',
+          'On the other hand, Pan Am also needs stronger control over its uniform and employee credentials. A uniform should not be enough to enter staff only area or receive employee benefit. The employee identification should be verified every time. Lost uniform and identification should also be reported quickly so they can’t be used for [[impersonation|impersonation]].',
+          'Finally, the bank and airline should use [[defence in depth|defence-in-depth]]. This means using several security controls instead of depending on only one. Identity documents, employee records, check verification and manager approval etc can work together. If Frank successfully bypasses one control, the other controls may still detect or stop the fraud.',
         ],
       },
     ],
@@ -96,6 +107,26 @@ const clips = [
     coverSource: 'https://media.vanityfair.com/photos/5fb2a90dcd94174b01e5ed11/master/w_1600%2Cc_limit/home-alone-movie-house-embed-inset.png',
     youtubeId: 'Ig7YCukLNys',
     videoTitle: 'Home Alone (1990) - Kevin sets up traps around his home scene',
+    analysisSections: [
+      {
+        title: 'Defence Overview: Protecting the House',
+        paragraphs: [
+          'In this scene, Kevin knows that the two burglars are planning to break into his house. He decided to prepare the house in advance and build up defensive barriers. He uses the entrance, stair, hallway and various household objects to slow the burglars down and make it harder for them to reach him.',
+          'From a security perspective, Kevin in this movie is acting as the defender. He first considers where the burglars are most likely to enter and how they would move through the house. He then places different traps along the possible path. This is very similar to planning security controls.',
+          'Kevin does not depend on only one defence. He creates many traps and each one is designed to affect the burglars at different stages of the breakin. Therefore this creates [[multiple layers of protection|defence-in-depth]].',
+          'This scene also shows that defence is not only about completely stopping an attacker at the first point of entry. Kevin’s goal is to plan and control the burglars’ movement, waste their time and make them difficult to reach him. So even when they bypass one trap, they would immediately face another one.',
+          'Overall, the scene shows that defence is an active process involving lots of stages, including design (set up the defence plan), preparation and response.',
+        ],
+      },
+      {
+        title: 'Defence in Depth',
+        paragraphs: [
+          'The main security concept shown in this scene is [[defence in depth|defence-in-depth]]. This means security should not depend on one control being completely successful. Instead, the system should use several different controls to work together, so the failure of one layer doesn’t cause the entire defence to fail.',
+          'In the movie Kevin uses this concept and have different traps for different stages of the break in. For example, before the burglars enter, he pours water on the outdoor steps, which then freeze and cause them to repeatedly slip. This is the first layer of defense. Although it doesn’t completely stop them, but it slows them down and makes entering the house much harder. After they reach the door, they face many other traps. For example, Kevin heats the door handles to cause Harry burn his hand when he tried to open the door. Marv later enters through a window but steps on glass ornaments that Kevin placed on the floor before. When they finally enter, there are many more other traps waiting for them inside.',
+          'Because the traps are different, the burglars can’t defeat the whole defence by learning how to avoid only one of them. Being more careful on the ice does not protect them from the hot door handle or the swinging paint cans. As a result, the main strength of Kevin’s defence is the combined effect of all these controls. Individually, most of the traps only cause a bit delay or injury, but combining them together they make the burglars slower, much more frustrated and less able to continue the attack. This is very similar to security, where multiple controls such as [[multi factor authentication|multi-factor-authentication]], firewalls, access restrictions and monitoring are often used together. Therefore even when one layer fails, the other layers can still work effectively to reduce the attacker’s progress.',
+        ],
+      },
+    ],
   },
   {
     id: 'focus-gambling',

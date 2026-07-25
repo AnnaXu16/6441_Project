@@ -52,6 +52,11 @@ const additionalConcepts = [
     term: 'Pretexting',
     definition: 'Creating a believable invented story, situation, or identity to gain a person’s trust and persuade them to provide information, access, money, or cooperation.',
   },
+  {
+    id: 'attention-manipulation',
+    term: 'Attention manipulation',
+    definition: 'Directing or distracting a person’s attention so they are less likely to notice warning signs, inspect a request carefully, or follow the normal security process.',
+  },
 ]
 
 const glossaryTerms = [...securityConcepts, ...additionalConcepts].sort((first, second) =>
