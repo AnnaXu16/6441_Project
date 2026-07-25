@@ -50,12 +50,12 @@ export default function Home() {
         <div className="activity-grid">
           <Link className="activity-card activity-quiz" to="/quiz">
             <span>01</span>
-            <div><p>10 QUESTIONS</p><h3>Knowledge Quiz</h3><small>Test common cybersecurity concepts and safer decisions.</small></div>
+            <div><h3>Knowledge Quiz</h3><small>Test common cybersecurity concepts and safer decisions.</small></div>
             <b aria-hidden="true">→</b>
           </Link>
           <Link className="activity-card activity-match" to="/concept-match">
             <span>02</span>
-            <div><p>5 TERMS PER SET</p><h3>Concept Match</h3><small>Connect security terms with their correct definitions.</small></div>
+            <div><h3>Concept Match</h3><small>Connect security terms with their correct definitions.</small></div>
             <b aria-hidden="true">→</b>
           </Link>
         </div>

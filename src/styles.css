@@ -89,21 +89,8 @@ main {
 .wordmark {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   font-size: 15px;
   font-weight: 700;
-}
-
-.wordmark-icon {
-  width: 34px;
-  height: 34px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  color: var(--white);
-  background: var(--accent);
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 18px;
 }
 
 .site-header nav {
@@ -233,16 +220,16 @@ main {
 
 .clip-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 16px;
 }
 
 .clip-card {
   position: relative;
-  min-height: 410px;
+  min-height: 310px;
   padding: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   border: 1px solid var(--line);
   border-radius: 6px;
   background: var(--card);
@@ -252,7 +239,7 @@ main {
 
 .clip-cover {
   position: relative;
-  aspect-ratio: 16 / 8.5;
+  flex: 0 0 46%;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -294,7 +281,7 @@ main {
 }
 
 .clip-card-content {
-  padding: 25px 27px 24px;
+  padding: clamp(28px, 4vw, 46px);
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -849,13 +836,6 @@ main {
 
 .activity-card > div {
   align-self: end;
-}
-
-.activity-card p {
-  margin-bottom: 10px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .1em;
 }
 
 .activity-card h3 {
@@ -1623,7 +1603,7 @@ main {
   }
 
   .clip-card {
-    min-height: 390px;
+    min-height: 300px;
   }
 
   .quiz-callout {
@@ -1706,6 +1686,12 @@ main {
   .clip-card {
     min-height: 360px;
     padding: 0;
+    flex-direction: column;
+  }
+
+  .clip-cover {
+    flex: none;
+    aspect-ratio: 16 / 8.5;
   }
 
   .clip-card h3 {

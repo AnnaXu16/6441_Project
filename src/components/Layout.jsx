@@ -6,7 +6,6 @@ export default function Layout() {
       <header className="site-header">
         <div className="header-inner">
           <Link className="wordmark" to="/" aria-label="Security in Cinema home">
-            <span className="wordmark-icon" aria-hidden="true">S</span>
             <span>Security in Cinema</span>
           </Link>
           <nav aria-label="Main navigation">

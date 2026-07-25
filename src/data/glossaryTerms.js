@@ -57,6 +57,16 @@ const additionalConcepts = [
     term: 'Attention manipulation',
     definition: 'Directing or distracting a person’s attention so they are less likely to notice warning signs, inspect a request carefully, or follow the normal security process.',
   },
+  {
+    id: 'false-positive',
+    term: 'False positive',
+    definition: 'When a security control incorrectly identifies legitimate or harmless activity as a threat.',
+  },
+  {
+    id: 'false-negative',
+    term: 'False negative',
+    definition: 'When a security control fails to identify activity that is actually malicious or dangerous.',
+  },
 ]
 
 const glossaryTerms = [...securityConcepts, ...additionalConcepts].sort((first, second) =>
