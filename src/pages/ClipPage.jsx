@@ -77,19 +77,15 @@ export default function ClipPage() {
 
       <section className="clip-analysis" aria-labelledby="analysis-heading">
         <div className="section-heading">
-          <div>
-            <p className="eyebrow">READ THE BREAKDOWN</p>
-            <h2 id="analysis-heading">Scene analysis</h2>
-          </div>
+          <h2 id="analysis-heading">Scene analysis</h2>
         </div>
 
         <div className="analysis-grid">
-          {sections.map((section, index) => (
+          {sections.map(section => (
             <article
               className={`analysis-card ${section.paragraphs?.length ? 'has-content' : ''}`}
               key={section.title}
             >
-              <span>{String(index + 1).padStart(2, '0')}</span>
               <h3>{section.title}</h3>
               {section.paragraphs?.length > 0 && (
                 <div className="analysis-copy">

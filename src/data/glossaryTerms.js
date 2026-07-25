@@ -47,6 +47,11 @@ const additionalConcepts = [
     term: 'Unauthorised access',
     definition: 'Accessing a system, account, data, device, or restricted location without the permission of its owner or another authorised person.',
   },
+  {
+    id: 'pretexting',
+    term: 'Pretexting',
+    definition: 'Creating a believable invented story, situation, or identity to gain a person’s trust and persuade them to provide information, access, money, or cooperation.',
+  },
 ]
 
 const glossaryTerms = [...securityConcepts, ...additionalConcepts].sort((first, second) =>

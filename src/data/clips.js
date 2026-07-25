@@ -36,9 +36,16 @@ const clips = [
           'Therefore, this creates a gap between the way Beck expects her information to be used and the way Joe actually uses it. This is why users need to think beyond their intended audience when sharing personal details online.',
         ],
       },
-      { title: 'Cognitive Failure: Confirmation Bias and Narrative Construction' },
-      { title: 'Real-World Cybersecurity Connection: Social Engineering, Cyberstalking and Targeted Attacks' },
-      { title: 'Defensive Controls: Reducing the Digital Attack Surface' },
+      {
+        title: 'Defence and Risk Reduction',
+        paragraphs: [
+          'One of the most effective defences is to reduce how much personal information is publicly available online. User can choose to set their social media account to private and regularly review who can see their posts. Privacy settings should also be regularly reviewed and user should avoid posting sensitive informations such as their live location, home address and workplace as these details can help an attacker identify and locate them in real life.',
+          'User can also review their older posts, tagged photos and information shared by friend. This is because even when someone doesn’t directly reveal sensitive information online, other people may expose it through tags, comments or group photos. Therefore, to further reduce [[risk|risk]] users can also turn off automatic location tagging and require approval before tagged posts appear on a profile.',
+          'Another defense is reducing identity linkability. Use the same username and profile photo across every platform would makes it very easy for someone to connect different accounts together. As a result, using different usernames for different accounts and limiting identifying details can make it harder for attackers to connect profile from multiple platforms and make [[information aggregation|information-aggregation]] more difficult.',
+          'It is also important to avoid posting in real time. Sharing photo after leaving the place can reduce the chance of other people use the information to track the users movements. Users should think about whether a post can reveal more than it intended, like street sign, building number, work badge etc.',
+          'These defences can’t completely stop someone like Joe, however, they can significantly reduce the amount of useful information available online, make information aggregation more difficult and limit the attackers ability to create an accurate profile.',
+        ],
+      },
     ],
   },
   {
@@ -50,6 +57,35 @@ const clips = [
     coverSource: 'https://decider.com/wp-content/uploads/2020/01/catch-me-if-you-can-on-netflix.jpg?quality=75&strip=all&w=1200',
     youtubeId: 'QtavKOeUGnA',
     videoTitle: 'Impersonating a Pilot | Catch Me If You Can',
+    analysisSections: [
+      {
+        title: 'Attack Overview: Constructing a False Identity',
+        paragraphs: [
+          'In this scene, Frank decides to pretend to be a Pan Am pilot. He first researched the pilot role thoroughly., gets a pilot uniform and acting as if he is a real pilot. Even though he has no qualification or any experience, the uniform makes his identity look very believable to people around him.',
+          'Furthermore, Frank doesn\'t rely only on the uniform, he also acts really confident and behaves like he belong in the airline environment. He understands that a convincing identity depends on both appearance and behaviour. So if he looks nervous, other people can begin to start question him. By appearing calm and professional, Frank was able to make the false identity seem very believable.',
+          'People normally see pilots as respectable and trustworthy professionals. The Pan Am uniform therefore becomes a visible symbol of authority and status. Therefore, when people see Frank as a pilot, they are less likely to question him.',
+          'As a result, Frank was able to exploit this trust and [[authority bias|authority-bias]] people have to cash fraudulent checks successfully. Bank employees are more willing to accept the checks because they believe he is a pilot working for a respected airline. This is an [[impersonation attack|impersonation]] because Frank uses a false identity to gain trust and cooperation. It is also a form of [[social engineering|social-engineering]] because he was able to manipulate how other people see him instead of directly attacking the bank’s system. In the end the attacks work really well because people focus on the convincing identity he presents and do not carry out enough independent verification.',
+        ],
+      },
+      {
+        title: 'Impersonation, Pretexting and Authentication Failure',
+        paragraphs: [
+          'There is an important difference between [[impersonation|impersonation]] and identity fraud. Impersonation is the act of pretending to be another person or in this case, claiming a role that someone doest actually have. Identity fraud on the other hand happen when this false identity is used to obtain money. Therefore, for Frank, he use impersonation to creates his fake identity, while the fraud (cash fake checks) is what the he does with it.',
+          'Frank’s method is also an example of [[pretexting|pretexting]]. Pretexting is when an attacker creates a believable background story to support a false identity. Frank doesn;t only claim to be a pilot. He creates a complete professional role that explains who he is, where he works and why other people should cooperate with him.',
+          'The false identity then become reusable. Frank can present the same pretext to different banks, airline employee and other companies. Each successful interaction makes the identity appear to be more legitimate and help to create more opportunities for future fraud.',
+          'This also shows the difference between [[identification|identification]] and [[authentication|authentication]]. Frank identifies himself by claiming that he is a Pan Am pilot, but this claim does not prove that his identity is genuine. What other people should do is to authenticate the claim by checking reliable evidence or official employee records. Without independent verification, Frank turn his false identity and pretext into repeated identity fraud.',
+        ],
+      },
+      {
+        title: 'Security Weakness: Verification and Authority Bias',
+        paragraphs: [
+          'The main security weakness shown in this scene is that people relies too much on appearance and professional status instead of proper verification. Instead of checking if Frank is actually employed by Pan Am, they rely on visual signals like his uniform and professional behaviour. These signals can support an identity claim, but they should not be treated as proof.',
+          'This connects to [[authority bias|authority-bias]]. People are often more likely to trust someone who appears important, powerful or professional. Since pilots are normally seen as responsible and reputable, people assume that someone looked like pilot is also honest. This allows Frank to receive higher level of trust from the bank than an ordinary customer would receive.',
+          'The attack also takes advantage of the [[halo effect|halo-effect]]. This happens when one positive characteristic influences how someone judges the rest of a person. In Franks case, his professional image causes people to make other assumptions, such as believing that he is financially reliable and that his check is genuine. However, being a pilot would not actually prove that a check is valid.',
+          'Therefore in the scene, the system failed because the verification process depends too much on human judgement. What the bank should do is to independently verify Frank’s identity and the validity of the check. When the bank allow professional appearance to influence security decisions, attacker can bypass controls without needing to break into any technical system',
+        ],
+      },
+    ],
   },
   {
     id: 'home-alone-defences',
@@ -60,11 +96,6 @@ const clips = [
     coverSource: 'https://media.vanityfair.com/photos/5fb2a90dcd94174b01e5ed11/master/w_1600%2Cc_limit/home-alone-movie-house-embed-inset.png',
     youtubeId: 'Ig7YCukLNys',
     videoTitle: 'Home Alone (1990) - Kevin sets up traps around his home scene',
-  },
-  {
-    id: 'focus-pickpocket',
-    film: 'Focus',
-    title: 'Pickpocketing Through Misdirection',
   },
   {
     id: 'focus-gambling',

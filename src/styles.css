@@ -475,13 +475,6 @@ main {
   border-top: 1px solid var(--line);
 }
 
-.analysis-card > span {
-  color: var(--accent);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .1em;
-}
-
 .analysis-card h3 {
   max-width: 850px;
   margin: auto 0 0;
@@ -492,19 +485,8 @@ main {
 }
 
 .analysis-card:not(.has-content) {
-  display: grid;
-  grid-template-columns: 54px 1fr;
+  display: flex;
   align-items: center;
-  gap: 24px;
-}
-
-.analysis-card:not(.has-content) > span {
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--line);
-  border-radius: 50%;
 }
 
 .analysis-card:not(.has-content) h3 {
@@ -516,19 +498,9 @@ main {
   padding: clamp(32px, 5vw, 56px);
 }
 
-.analysis-card.has-content > span {
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
-  color: var(--white);
-  border-radius: 50%;
-  background: var(--accent);
-}
-
 .analysis-card.has-content h3 {
   max-width: 920px;
-  margin: 26px 0 34px;
+  margin: 0 0 34px;
   font-size: clamp(32px, 4.5vw, 48px);
   line-height: 1.12;
 }
@@ -1915,13 +1887,6 @@ a.clip-nav-card:hover {
   .analysis-card:not(.has-content) {
     min-height: 126px;
     padding: 22px 18px;
-    grid-template-columns: 42px 1fr;
-    gap: 14px;
-  }
-
-  .analysis-card:not(.has-content) > span {
-    width: 36px;
-    height: 36px;
   }
 
   .analysis-card.has-content {
@@ -1930,7 +1895,7 @@ a.clip-nav-card:hover {
   }
 
   .analysis-card.has-content h3 {
-    margin-block: 22px 28px;
+    margin-block: 0 28px;
     font-size: 32px;
   }
 
