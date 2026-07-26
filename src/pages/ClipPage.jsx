@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import clips from '../data/clips'
-import ClipQuiz from '../components/ClipQuiz'
 import NotFound from './NotFound'
 
 const defaultAnalysisSections = [
@@ -96,7 +95,6 @@ export default function ClipPage() {
         </div>
       </section>
 
-      <ClipQuiz key={clip.id} clipTitle={clip.title} />
     </section>
   )
 }
