@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// A small Vite setup is all this static educational site needs.
-export default defineConfig({
+// Production assets use the GitHub repository path; local development stays at /.
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/6441_Project/' : '/',
   plugins: [react()],
-})
+}))
