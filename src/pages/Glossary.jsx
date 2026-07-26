@@ -26,7 +26,6 @@ export default function Glossary() {
       <Link className="back-link" to="/">← Home</Link>
 
       <div className="glossary-title">
-        <p className="eyebrow">REFERENCE LIBRARY</p>
         <h1>Security Glossary</h1>
       </div>
 
@@ -39,7 +38,6 @@ export default function Glossary() {
           onChange={event => setSearch(event.target.value)}
           placeholder="Search terms or definitions"
         />
-        <span>{visibleTerms.length} terms</span>
       </div>
 
       <div className="glossary-list">

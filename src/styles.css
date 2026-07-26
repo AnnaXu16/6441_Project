@@ -298,10 +298,14 @@ main {
 .clip-card-content p {
   margin-bottom: 10px;
   color: var(--accent);
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: .1em;
   text-transform: uppercase;
+}
+
+.clips-section .eyebrow {
+  font-size: 17px;
 }
 
 .clip-card h3 {
@@ -887,7 +891,7 @@ main {
 }
 
 .glossary-title h1 {
-  margin: 14px 0 0;
+  margin: 0;
   font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(32px, 7vw, 76px);
   font-weight: 400;
@@ -898,7 +902,7 @@ main {
 .glossary-tools {
   padding: 18px 20px;
   display: grid;
-  grid-template-columns: auto minmax(180px, 1fr) auto;
+  grid-template-columns: auto minmax(180px, 1fr);
   align-items: center;
   gap: 18px;
   border: 1px solid var(--line);
@@ -906,8 +910,7 @@ main {
   background: var(--card);
 }
 
-.glossary-tools label,
-.glossary-tools > span {
+.glossary-tools label {
   color: var(--muted);
   font-size: 11px;
   font-weight: 700;

@@ -67,6 +67,21 @@ const additionalConcepts = [
     term: 'False negative',
     definition: 'When a security control fails to identify activity that is actually malicious or dangerous.',
   },
+  {
+    id: 'priming',
+    term: 'Priming',
+    definition: 'Exposure to information that influences how a person later notices, remembers, or responds to related information, often without being fully aware of the influence.',
+  },
+  {
+    id: 'familiarity-effect',
+    term: 'Familiarity effect',
+    definition: 'The tendency to prefer, trust, or select something because it has been seen or experienced before.',
+  },
+  {
+    id: 'illusion-of-choice',
+    term: 'Illusion of choice',
+    definition: 'A situation where a person feels they are choosing freely even though the available information or environment has been designed to guide them toward a particular option.',
+  },
 ]
 
 const glossaryTerms = [...securityConcepts, ...additionalConcepts].sort((first, second) =>

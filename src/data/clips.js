@@ -149,6 +149,39 @@ const clips = [
     coverSource: 'https://i.ytimg.com/vi/SKL20MFjoNQ/hqdefault.jpg',
     youtubeId: 'SKL20MFjoNQ',
     videoTitle: 'Focus - Gambling Scene | Number 55 (HD)',
+    analysisSections: [
+      {
+        title: 'Attack Overview',
+        paragraphs: [
+          'In this scene, Nicky and Jess are watching a football game with a wealthy gambler called Liyuan Tse. Nicky begins to make different bets with Tse and the amount of money they bet gradually increases. Nicky appeared to be losing control and eventually loses all of the money his team earned. This makes Tse believe that Nicky is desperate and willing to make a very risky final bet.',
+          'For the final bet, Nicky asks Tse to choose any player on or off the field. Jess then has to correctly guess the number of the player he selected. This challenge appears almost impossible because there are many different players and Jess does not know which person Tse has chosen. From Tse’s perspective, he is making a completely free and random choice.',
+          'However, the entire situation has already been prepared by Nicky and his team. Before the game, they repeatedly exposed Tse to the number 55 through different objects, signs, sounds and people around him. During the final bet, Nicky’s team member Farhad is also positioned near the field wearing the number 55. This helps Jess choose the same number after she recognises him. Jess was not told about the full plan, so her worried reaction during the bet appears genuine.',
+          'The attack works because Nicky didn’t directly tell Tse which number to choose. Instead, he controls the information around Tse and makes number 55 feel familiar. Tse believes that he made the decision independently, when his attention and memory have actually been influenced in advance. This is a form of [[social engineering|social-engineering]] because the attack changes how the target thinks and makes decisions rather than attacking any technical system.',
+        ],
+      },
+      {
+        title: 'Attention Manipulation  and the Illusion of Choice',
+        paragraphs: [
+          'The main technique used by Nicky’s team is [[attention manipulation|attention-manipulation]]. Instead of directly asking Tse to choose number 55, the team changes the environment around him. This allows them to influence what information enters his attention while making the process appear natural.',
+          'This technique is also called [[priming|priming]]. Priming happen when information someone experiences earlier affects how they respond to other things later. By repeatedly exposing Tse to 55, Nicky made it easy for him to remember. When Tse is later asked to quickly choose a player, this number is already familiar and available in his mind, even if he can’t explain exactly why.',
+          'The attack also takes advantage of the [[familiarity effect|familiarity-effect]]. People can sometimes prefer or trust something simply because they have seen it before. Number 55 feel like a natural choice to Tse as he doesn’t remember all of the earlier signals, so he believes that the idea came from himself.',
+          'As a result, this creates an [[illusion of free choice|illusion-of-choice]]. Tse is technically allowed to select any player, but Nicky has already influenced which option is most likely to attract his attention. This is what makes the manipulation difficult to notice because Tse still feels that he is in control.',
+          'The scene the attacker also uses risk escalation and emotional decision making. As the bets become larger, Tse becomes more involved and confident because he has already won the earlier rounds. Therefore the final bet appear more like a good opportunity instead of a warning sign. This makes him less likely to stop and question why Nicky is willing to make such a risky bet.',
+          'Jess is also an important part of the manipulation as she doesn’t know the full plan. Her fear and confusions during the final bet are real, so her genuine emotional reaction makes the situation more believable to Tse so he doesn’t think it is a scam.',
+          'In real life, attackers also often control what information a target notices. A [[phishing|phishing]] message may highlight an urgent warning to create a [[sense of urgency|urgency-manipulation]] to make suspicious information less noticeable. The user can believe they are making an independent decision, even though the attacker has carefully designed the situation to guide their attention.',
+        ],
+      },
+      {
+        title: 'Defence and Risk Reduction',
+        paragraphs: [
+          'One important defence against this type of manipulation is to slow down before making a [[high risk|risk]] decision. Nicky’s attack works because Tse is asked to choose quickly while he is excited and focused on the possibility of winning. Taking a break can reduce the emotional pressure and give the person time to think properly and question why one option feels more familiar than the other',
+          'People should also avoid trusting a choice only because it feels natural. If one number immediately comes to mind, they can take time to think about if they recently seen it somewhere. They can also use an independent method to make the decision. For example, a random number generator would make it nearly impossible for an attacker to predict the final choice through [[priming|priming]].',
+          'Setting limits before entering a risky situation is another useful defence. A person can decide in advance how much money they are prepared to lose and stop when that limit is reached. Furthermore it is also useful to get an independent opinion from someone who is not emotionally involved in the situation. A second person may notice unusual behaviour or warning signs that the target has missed.',
+          'In real life, people should be careful when a message tries to control their attention or trying to create a [[sense of urgency|urgency-manipulation]]. The best thing to do is to pause, inspect and verify the request through a separate method. For example, when receiving a [[scam message|phishing]] claiming to be the bank, instead of click on the link inside the message, a better way to deal with it is to contact the bank through its official website.',
+          'Overall, these defences can’t completely prevent someone from trying to influence a decision. However, slowing down, setting limits and using independent verification can make the manipulation less effective.',
+        ],
+      },
+    ],
   },
 ]
 
