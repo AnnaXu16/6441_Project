@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
 import clips from '../data/clips'
 
+function publicAsset(path) {
+  return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`
+}
+
 export default function Home() {
   return (
     <>
@@ -26,7 +30,7 @@ export default function Home() {
             <Link className="clip-card" to={`/clips/${clip.id}`} key={clip.id}>
               <div
                 className={clip.cover ? 'clip-cover has-cover' : 'clip-cover'}
-                style={clip.cover ? { backgroundImage: `url(${clip.cover})`, backgroundPosition: clip.coverPosition } : undefined}
+                style={clip.cover ? { backgroundImage: `url("${publicAsset(clip.cover)}")`, backgroundPosition: clip.coverPosition } : undefined}
               >
                 <span>{String(index + 1).padStart(2, '0')}</span>
                 <span aria-hidden="true">↗</span>
